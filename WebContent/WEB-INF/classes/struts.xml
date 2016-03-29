@@ -11,7 +11,25 @@
 		<action name="Welcome" class="com.fjr.struts.gettingstarted.WelcomeUserAction">
 			<result name="SUCCESS">WEB-INF/pages/welcome_user.jsp</result>
 		</action>
+
+		<action name="register">
+			<result>WEB-INF/pages/textbox/register.jsp</result>
+		</action>
+		
+		<action name="registerUser" class="com.fjr.struts.textbox.RegisterAction">
+			<result name="SUCCESS">WEB-INF/pages/textbox/welcome.jsp</result>
+			<result name="input">WEB-INF/pages/textbox/register.jsp</result>
+		</action>
 	</package>
-
-
+	
+	<package name="texbox" namespace="/texbox" extends="struts-default" >
+		<action name="register">
+			<result>register.jsp</result>
+		</action>
+		<action name="registerUser" class="com.fjr.struts.textbox.RegisterAction">
+			<result name="SUCCESS">welcome.jsp</result>
+			<result name="input">register.jsp</result>
+		</action>
+	</package>
+	
 </struts>
