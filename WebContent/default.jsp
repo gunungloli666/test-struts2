@@ -21,6 +21,22 @@
 	<td><a href="texbox/register">link</a></td>
 </tr>
 
+<tr>
+	<td>chart 1</td>
+	<td><a href="displaychart1">link</a></td>
+</tr>
+
+<tr>
+	<td>chart 2: Bar Chart</td>
+	<td><a href="displaychart2">link</a></td>
+</tr>
+
+<tr>
+	<td>Tab 1</td>
+	<td><a href="tab1" >link</a> </td>
+</tr>
+
+
 </table>
 
 </body>

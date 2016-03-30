@@ -71,6 +71,7 @@
 	</package>
 	
 	
+	<!-- Untuk menggunakan chart, gunakan extends jfreechart=default -->
 	<package name="struts2" extends="jfreechart-default">
 	
 		<action name="displayChart" class="com.fjr.struts.jfreechart.JfreeChartAction">
@@ -95,8 +96,25 @@
 				WEB-INF/pages/jfreechart/wellcome.jsp
 			</result>
 		</action>
-			
+		
+		<action name="displaychart2">
+			<result>
+				WEB-INF/pages/jfreechart/chart2.jsp
+			</result>
+		</action>
+		
 	</package>  
+	
+	
+	<package name="tabbed-panel" extends="struts-default" >
+		<action name="tab1">
+			<result>
+				WEB-INF/pages/tabbed/tab.jsp 
+			</result>
+		</action>
+	
+	</package>
+	
 	
 	
 	
