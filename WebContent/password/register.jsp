@@ -12,7 +12,7 @@
 	<table>
 		<tr>
 <!-- 			<td>User Name: </td> -->
-			<td><s:textfield key="usernamex" /></td>
+			<td><s:textfield key="username" /></td>
 		</tr>
 		<tr>
 <!-- 			<td>Password: </td>	 -->

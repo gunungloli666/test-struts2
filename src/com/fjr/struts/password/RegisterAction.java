@@ -23,11 +23,11 @@ public class RegisterAction extends ActionSupport{
 		this.confirmPassword = confirmPassword;
 	}
 
-	public String getUsernamex() {
+	public String getUsername() {
 		return username;
 	}
 
-	public void setUsernamex(String username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
@@ -38,7 +38,7 @@ public class RegisterAction extends ActionSupport{
 
 	//simple validation
 	public void validate(){
-		if("".equals(getUsernamex())){
+		if("".equals(getUsername())){
 			addFieldError("username", getText("username.required"));
 		}
 		if("".equals(getPassword())){

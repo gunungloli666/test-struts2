@@ -25,7 +25,15 @@
 		<action name="registerUser" class="com.fjr.struts.textbox.RegisterAction">
 			<result name="SUCCESS">WEB-INF/pages/textbox/welcome.jsp</result>
 			<result name="input">WEB-INF/pages/textbox/register.jsp</result>
+			</action>
+	
+		<!-- pengaturan tampilan view diatur relatif terhadap WebContent folder -->
+		<action name="displayStudentList" class="com.fjr.struts.pagination.StudentAction"
+			method="displayStudentList">
+			<result name="success">WEB-INF/pages/pagination/displaytag.jsp</result>
 		</action>
+			
+		
 	</package>
 
 	<package name="texbox" namespace="/texbox" extends="struts-default">
