@@ -116,6 +116,59 @@
 	</package>
 	
 	
+	<package name="menu-test" extends="struts-default" >
+		<action name="menu1">
+			<result>
+				WEB-INF/pages/menu/menu.jsp 
+			</result>
+		</action>
+	</package>
+	
+	
+	<package name="default"  extends="struts-default">
+		<action name="selectAction" class="com.fjr.struts.dropdown.SelectAction"
+			method="display">
+			<result name="none">WEB-INF/pages/dropdown/select.jsp</result>
+		</action>
+	
+		<action name="resultAction" class="com.fjr.struts.dropdown.SelectAction">
+			<result name="success">WEB-INF/pages/dropdown/result.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	<package name="dropdown-dynamic"  extends="json-default">
+        <interceptors>
+            <interceptor-stack name="defaultStack" >
+                <interceptor-ref name="json" >
+                    <param name="enableSMD">true</param>
+                </interceptor-ref >
+            </interceptor-stack>
+        </interceptors>
+        
+        <default-interceptor-ref name="defaultStack" />
+ 
+        <action name="readDistricts" 
+        	class="com.fjr.struts.dropdown.dynamic.ReadData" method="dbDistricts">
+            <result type="json"></result>
+        </action>
+ 
+        <action name="readStates" 
+        	class="com.fjr.struts.dropdown.dynamic.ReadData" method="dbStates">
+            <result type="json"></result>
+        </action>
+        
+        <action name="dropdown-wellcome" >
+        	<result>
+        		WEB-INF/pages/dropdown/dynamic/test1.jsp
+        	</result>
+        </action>
+        
+    </package>
+	
+	
+	
 	
 	
 

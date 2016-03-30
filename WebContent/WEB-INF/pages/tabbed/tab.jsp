@@ -12,7 +12,8 @@
     <s:url var="remoteurl1" action="displaychart1.action" />
     <s:url var="remoteurl2" action="displaychart2.action" />
 
-    <sj:tabbedpanel id="remotetabs" selectedTab="1" show="true" hide="'fade'" collapsible="true" sortable="true">
+    <sj:tabbedpanel id="remotetabs" selectedTab="1" show="true" hide="'fade'" 
+    		collapsible="true" sortable="true">
         <sj:tab id="tab1" href="%{remoteurl1}" label="Remote Tab One"/>
         <sj:tab id="tab2" href="%{remoteurl2}" label="Remote Tab Two"/>
     </sj:tabbedpanel>
