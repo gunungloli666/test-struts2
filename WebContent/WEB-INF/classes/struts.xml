@@ -32,6 +32,11 @@
 			method="displayStudentList">
 			<result name="success">WEB-INF/pages/pagination/displaytag.jsp</result>
 		</action>
+		
+			
+
+		
+ 
 			
 		
 	</package>
@@ -64,5 +69,36 @@
 			<result name="error">Login.jsp</result>
 		</action>
 	</package>
+	
+	
+	<package name="struts2" extends="jfreechart-default">
+	
+		<action name="displayChart" class="com.fjr.struts.jfreechart.JfreeChartAction">
+			<result name="success" type="chart">
+				<param name="value">chart</param>
+				<param name="type">jpeg</param>
+				<param name="width">600</param>
+				<param name="height">400</param>
+			</result>
+		</action>
+	
+		<action name="viewModerationChart"
+			class="com.fjr.struts.jfreechart.ViewModerationChartAction">
+			<result name="success" type="chart">
+				<param name="width">400</param>
+				<param name="height">300</param>
+			</result>
+		</action>
+	
+		<action name="displaychart1">
+			<result>
+				WEB-INF/pages/jfreechart/wellcome.jsp
+			</result>
+		</action>
+			
+	</package>  
+	
+	
+	
 
 </struts>
