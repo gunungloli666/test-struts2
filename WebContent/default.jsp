@@ -7,6 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-hai Mohammad Fajar
+<h2>Selamat Belajar Struts Mohammad Fajar</h2> 
+
+<table>
+
+<tr>
+	<td>TexBox</td>
+	<td><a href="texbox/register">link</a></td>
+</tr>
+
+<tr>
+	<td>Password</td>
+	<td><a href="texbox/register">link</a></td>
+</tr>
+
+</table>
+
 </body>
+
+
+
 </html>

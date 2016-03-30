@@ -5,9 +5,9 @@
 <body>
 <h1>Struts 2 - textbox example</h1>
 
-<h2><s:property value="username"/></h2>
+<h2><s:property value="usernamey"/></h2>
 	or
-<h2><s:property value="%{username}"/></h2> 
+<h2><s:property value="%{usernamey}"/></h2> 
 
 </body>
 </html>

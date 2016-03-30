@@ -7,14 +7,14 @@ public class RegisterAction extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String username;
+	private String userxname;
 
-	public String getUsername() {
-		return username;
+	public String getUsernamey() {
+		return userxname;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsernamex(String username) {
+		this.userxname = username;
 	}
 
 	//business logic
@@ -26,7 +26,7 @@ public class RegisterAction extends ActionSupport{
 
 	//simple validation
 	public void validate(){
-		if("".equals(getUsername())){
+		if("".equals(getUsernamey())){
 			addFieldError("username", getText("username.required"));
 		}
 	}

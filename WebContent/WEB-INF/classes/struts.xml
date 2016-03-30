@@ -4,6 +4,12 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.custom.i18n.resources"
+		value="ApplicationResources" />
+
 	<package name="user" namespace="/" extends="struts-default">
 		<action name="Login">
 			<result>WEB-INF/pages/login.jsp</result>
@@ -15,14 +21,14 @@
 		<action name="register">
 			<result>WEB-INF/pages/textbox/register.jsp</result>
 		</action>
-		
+
 		<action name="registerUser" class="com.fjr.struts.textbox.RegisterAction">
 			<result name="SUCCESS">WEB-INF/pages/textbox/welcome.jsp</result>
 			<result name="input">WEB-INF/pages/textbox/register.jsp</result>
 		</action>
 	</package>
-	
-	<package name="texbox" namespace="/texbox" extends="struts-default" >
+
+	<package name="texbox" namespace="/texbox" extends="struts-default">
 		<action name="register">
 			<result>register.jsp</result>
 		</action>
@@ -31,5 +37,24 @@
 			<result name="input">register.jsp</result>
 		</action>
 	</package>
-	
+
+	<package name="password" namespace="/password" extends="struts-default">
+		<action name="register">
+			<result>register.jsp</result>
+		</action>
+		<action name="registerUser" class="com.fjr.struts.password.RegisterAction">
+			<result name="SUCCESS">wellcome.jsp</result>
+			<result name="input">register.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="password2" namespace="/password2" extends="struts-default" >
+		<action name="login" method="authenticate"
+				class="com.fjr.struts.password.LoginAction">
+			<result name="success">Welcome.jsp</result>
+			<result name="error">Login.jsp</result>
+		</action>
+	</package>
+
 </struts>
